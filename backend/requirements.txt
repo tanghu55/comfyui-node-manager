@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+python-multipart
+aiofiles
+packaging
+websockets # <--- 新增

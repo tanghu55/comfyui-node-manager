@@ -1,0 +1,5 @@
+{
+  "comfyui_path": "E:\\ccomfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes",
+  "python_path": "E:\\ccomfyui\\ComfyUI_windows_portable\\python_embeded\\python.exe",
+  "pip_mirror": "https://pypi.tuna.tsinghua.edu.cn/simple"
+}
