@@ -55,9 +55,9 @@ Bash
 执行以下命令启动 FastAPI 开发服务器：
 # 如果您使用的是 Windows
 python run.py
-
+或者uvicorn app.main:app --port 8000
 # 如果您不使用 run.py，或者在非 Windows 系统上
-#uvicorn app.main:app --port 8000
+#uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 我们推荐使用 python run.py，因为它包含了对 Windows 平台的兼容性处理。
 当您看到类似 Uvicorn running on http://127.0.0.1:8000 的输出时，表示后端已成功启动。
