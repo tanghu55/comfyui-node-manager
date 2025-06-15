@@ -13,52 +13,30 @@ Node.js (版本 16.x 或更高)，并附带 npm 包管理器
 首先，从代码仓库克隆本项目到您的本地计算机。
 git clone <your-repository-url>
 cd comfyui-node-manager
-Use code with caution.
-Bash
 2. 后端设置 (FastAPI)
 后端负责所有核心逻辑，如扫描插件、解析依赖、执行 pip 命令等。
-进入后端目录
-cd backend
-Use code with caution.
-Bash
+进入后端目录cd backend
 创建并激活 Python 虚拟环境 (推荐)
-Windows:
-python -m venv venv
+Windows:python -m venv venv
 venv\Scripts\activate
-Use code with caution.
-Cmd
-Linux / macOS:
-python3 -m venv venv
+Linux / macOS:python3 -m venv venv
 source venv/bin/activate
-Use code with caution.
-Bash
-激活成功后，您的终端提示符前应出现 (venv)。
-安装 Python 依赖
-pip install -r requirements.txt
-Use code with caution.
-Bash
+激活成功后，您的终端提示符前应出现 (venv)
+安装 Python 依赖：pip install -r requirements.txt
 3. 前端设置 (Vue)
 前端负责所有用户界面和交互。
-打开一个新的终端，然后进入前端目录。
-cd path/to/comfyui-node-manager/frontend
-Use code with caution.
-Bash
-安装 Node.js 依赖
-npm install
-Use code with caution.
-Bash
-此命令会读取 package.json 文件并下载所有必需的前端库（如 Vue, Element Plus, Axios 等）。
+打开一个新的终端，然后进入前端目录：cd path/to/comfyui-node-manager/frontend
+安装 Node.js 依赖：npm install
+此命令会读取 package.json 文件并下载所有必需的前端库（如 Vue, Element Plus, Axios 等）
 🚀 启动项目
 您需要同时启动后端和前端两个服务。请确保在两个独立的终端窗口中分别执行以下命令。
 1. 启动后端服务
 终端 1: 确保您位于 backend 目录并且 Python 虚拟环境已激活。
-执行以下命令启动 FastAPI 开发服务器：
-# 如果您使用的是 Windows
-python run.py
-或者uvicorn app.main:app --port 8000
-# 如果您不使用 run.py，或者在非 Windows 系统上
-#uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+执行以下命令启动 FastAPI 开发服务器：# 如果您使用的是 Windows
+python run.py  或者uvicorn app.main:app --port 8000
 
+# 如果您不使用 run.py，或者在非 Windows 系统上
+# uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 我们推荐使用 python run.py，因为它包含了对 Windows 平台的兼容性处理。
 当您看到类似 Uvicorn running on http://127.0.0.1:8000 的输出时，表示后端已成功启动。
 2. 启动前端服务
