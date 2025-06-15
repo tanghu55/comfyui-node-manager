@@ -58,15 +58,14 @@ python run.py
 
 # 如果您不使用 run.py，或者在非 Windows 系统上
 #uvicorn app.main:app --port 8000
-Bash
+
 我们推荐使用 python run.py，因为它包含了对 Windows 平台的兼容性处理。
 当您看到类似 Uvicorn running on http://127.0.0.1:8000 的输出时，表示后端已成功启动。
 2. 启动前端服务
 终端 2: 确保您位于 frontend 目录。
 执行以下命令启动 Vite 开发服务器：
 npm run dev
-Use code with caution.
-Bash
+
 当您看到类似 Local: http://localhost:5173/ 的输出时，表示前端开发服务器已成功启动。
 🖥️ 使用工具
 访问应用
